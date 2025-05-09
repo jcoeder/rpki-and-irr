@@ -1,0 +1,128 @@
+Cogent Communications
+BGP Questionnaire
+
+I.  CUSTOMER INFORMATION
+
+    Company Name:  
+    BGP Order Number:
+    Tech Contact 1:  
+    Tech Contact 2:  
+
+II.  BGP SERVICE - All requests for BGP peering must have a valid BGP4 and/or BGP6 order ID.
+
+ ##########################################################################################################
+
+                                                    NOTE                          
+ This ASN must be registered to the same company with the Regional Internet Registry as the company named on    
+ the Cogent Communications contract.  If it is not you will be required to provide an LOA from the owner
+ of the registered resource.
+
+ ###########################################################################################################
+
+ 1. Please provide the Cogent port/LAG bundle order ID(s) that require BGP routing:
+
+
+
+ 2. Autonomous System Number (ASN) - Please check the appropriate box for your network.
+
+    [   ]  I will be announcing my routes to you via ASN(s):  
+
+    [   ]  I need a private ASN to speak BGP at more than one Cogent location, but to no other ISP.
+	   Indicate the Cogent Port order numbers for your other locations:
+
+
+           Customers needing private AS BGP will only be allowed to announce out Cogent IP space.
+
+
+ 3. BGP session password (Optional):  
+
+ 4. BGP TTL Security: [  ]
+ 
+	If you want Cogent to enable BGP TTL Security on your eBGP session indicate here.
+
+	You will need to make sure your equipment is configured for BGP TTL Security before enabling 
+	the eBGP session to Cogent.  
+	
+	Please refer to your equipment vendor's documentation to see if your equipment can support this BGP feature.
+
+	For more information on BGP TTL security visit https://datatracker.ietf.org/doc/html/rfc5082
+
+ 4. If you have an AS-Set registered in an IRR database and would like to have Cogent use it to automatically
+    update our prefix lists for your BGP sessions, provide it here:
+
+
+
+##########################################################################################################
+
+	Cogent can use the RADB or one of the five Regional Internet Registry IRR database to pull prefixes 
+	if you have provided us with an AS-Set. Cogent defaults to RADB as it mirrors most of the major IRR 
+	registries. If you would prefer us to pull prefixes from a specific RIR's routing registry, please 
+	make note of that in the additional comments section. 
+	For a complete list of the databases RADb mirrors, visit http://www.irr.net/docs/list.html#RADB.
+
+##########################################################################################################
+
+ 5.  IP Address Blocks to Announce:
+     
+
+
+
+
+
+
+
+
+    Cogent will automatically add 'le 24' tags on IPv4 prefixes, and �le 48� tags on IPv6 prefixes.
+
+ 6. BGP Peering Requirements � Select one of the following:
+
+       [   ]  Full
+       [   ]  Full (detailed)
+          --OR--
+       [   ]  Cogent Backbone & Cogent Customer routes
+       [   ]  Cogent Backbone & Cogent Customer routes (detailed)
+       
+          --AND/OR--
+       [   ]  Default Route
+
+              Detailed routes are de-aggregated announcements within the Cogent network.
+
+
+ 7.  Remote Trigger Black Hole
+
+	Your eBGP peering with Cogent allows you to blackhole specific IPv4 and IPv6 prefixes.  
+
+	To take advantage of this feature you will need to tag any IP prefixes to be blackholed with the
+	specific BGP community of 65535:666.
+
+	If you anticipate needing to blackhole more than 100 IP prefixes contact Cogent Customer Service
+	departments as we may need to increase the maximum number of IP prefixes on your eBGP peering 
+	sessions.
+
+
+III.  Bi-directional Forwarding Detection - BFD with BGP
+
+      Cogent offers our customers passive BFD if they would like to configure their equipment for faster reconvergence
+      of their BGP sessions to multiple providers.
+
+      We only offer this for BGP sessions across single ports.  This is currently not available if you are aggregating 
+      your ports into a LAG/LACP bundle.
+
+      With passive BFD Cogent uses a multiplier value of 3 and a packet interval of 333ms.  You are free to set your
+      own values and the Cogent router will use those values.
+
+IV.  Additional vlan setup on a per port basis.
+
+     If you require vlans to separate out bgp peering on a physical port you will be issued a /31 IPv4 and /127 IPv6
+     connected blocks.  If you equipment cannot support a /31 IPv4 block and need a /30 IPv4 block, please let your
+     sales representitive know and they will generate a free order for an additional /31 IPv4 block which will be 
+     combined into a /30 IPv4 block.
+
+V.  ADDITIONAL COMMENTS (add additional sheets as necessary)
+
+
+
+
+View Cogent forms at http://www.cogentco.com/Guide/
+
+http://www.cogentco.com/Guide/BGPQ.txt                                               BGPQ-v7.1 11/04/2024
