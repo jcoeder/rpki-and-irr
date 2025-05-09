@@ -7,3 +7,8 @@ whois -h rr.arin.net -- "-i origin AS88" | grep '^route'
 whois -h filtergen.level3.com RADB::AS-Encore-Technologies
 whois -h filtergen.level3.com ARIN::AS88
 whois -h filtergen.level3.com AS3356
+
+
+whois -h whois.radb.net 'aut-num AS395176'
+whois -h whois.radb.net 'aut-num AS3819'
+whois -h rr.arin.net 'aut-num AS3819'
