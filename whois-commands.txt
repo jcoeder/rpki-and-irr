@@ -1,14 +1,23 @@
 whois -h rr.arin.net -I 1.1.1.0/24
 whois -h rr.arin.net -I AS88
 whois -h rr.arin.net -I AS395176
-whois -h rr.arin.net -- "-i origin AS88"
-whois -h rr.arin.net -- "-i origin AS88" | grep '^route'
 
 whois -h filtergen.level3.com RADB::AS-Encore-Technologies
 whois -h filtergen.level3.com ARIN::AS88
 whois -h filtergen.level3.com AS3356
 
+whois -h whois.radb.net 'route: 8.8.8.0/24'
+whois -h whois.radb.net 'route6: 2001:4860::/32'
+whois -h rr.arin.net 'route: 8.8.8.0/24'
 
-whois -h whois.radb.net 'aut-num AS395176'
-whois -h whois.radb.net 'aut-num AS3819'
-whois -h rr.arin.net 'aut-num AS3819'
+whois -h rr.arin.net 'aut-num: AS3819'
+whois -h whois.radb.net 'aut-num: AS15169'
+
+whois -h whois.radb.net 'as-set: AS-Encore-Technologies'
+whois -h whois.radb.net 'as-set: AS-GOOGLE'
+
+sudo apt install bgpq3 -y
+bgpq3 -h whois.radb.net -S RADB AS-Encore-Technologies
+bgpq3 -h rr.arin.net -S ARIN -4 -l AS3819_PREFIXES AS3819
+
+https://routing.he.net/
