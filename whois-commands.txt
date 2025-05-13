@@ -22,4 +22,11 @@ sudo apt install bgpq3 -y
 bgpq3 -h whois.radb.net -S RADB AS-Encore-Technologies
 bgpq3 -h rr.arin.net -S ARIN -4 -l AS3819_PREFIXES AS3819
 
+whois -h filtergen.level3.net "ARIN::AS-AMPLEX -searchpath=ARIN;RADB -recurseok -warnonly
+whois -h filtergen.level3.net AS20205
+whois -h filtergen.level3.net LEVEL3::AS20205
+whois -h filtergen.level3.net RADB::AS20205
+whois -h filtergen.level3.net ARIN::AS20205
+whois -h filtergen.level3.net ALTDB::AS20205
+
 https://routing.he.net/
