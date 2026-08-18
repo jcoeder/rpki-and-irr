@@ -31,3 +31,6 @@ whois -h filtergen.level3.net ARIN::AS20205
 whois -h filtergen.level3.net ALTDB::AS20205
 
 https://routing.he.net/
+
+Lumen does strange stuff and filters specifically on the as-set AND maintainer.  Submit a filter like this to them when you have BGP customers
+RADB::AS-YOUR-ORG-HERE -searchpath=ARIN;RADB;AFRINIC;ALTDB;APNIC;BELL;LACNIC;RIPE;LEVEL3;NTTCOM -recurseok.
